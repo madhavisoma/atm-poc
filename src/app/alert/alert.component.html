@@ -1,0 +1,7 @@
+<div mat-dialog-content>
+    <h2 mat-dialog-title [ngStyle]="{'color': data.status==='fail'? 'red' : 'green'}">Message</h2>
+  <h4>{{data.message}}</h4> <span *ngIf="data.status==='fail'">please try again...</span>
+  <h5 *ngIf="data.withdraw">Amount Withdrawn Denomination: <br>{{atmService.withdrawnCurrency | json}}</h5>
+</div>
+  <button type="button" [ngStyle]="{'background-color': data.status==='fail'? 'red' : 'green'}" class="btn msg-btn" [mat-dialog-close]="data.status" cdkFocusInitial>OK</button>
+

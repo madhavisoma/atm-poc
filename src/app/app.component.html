@@ -1,0 +1,18 @@
+<div class="container">
+  <div class="row menu">
+    <div class="col-sm-3">
+      <button type="button" class="btn btn-primary menu-btn" (click)="navigateToUrl('')">Home</button>
+    </div>
+    <div class="col-sm-3">
+      <button type="button" class="btn btn-primary menu-btn" (click)="navigateToUrl('/withdraw')">Withdraw</button>
+    </div>
+    <div class="col-sm-3">
+      <button type="button" class="btn btn-secondary menu-btn" (click)="navigateToUrl('/restock')">Restock</button>        </div>
+    <div class="col-sm-3">
+      <button type="button" class="btn btn-success menu-btn" (click)="navigateToUrl('/overview')">Overview</button>
+    </div>
+  </div>
+    <div class="frame">
+   <router-outlet></router-outlet>
+    </div>
+  </div>

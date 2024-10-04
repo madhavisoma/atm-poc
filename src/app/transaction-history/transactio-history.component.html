@@ -1,0 +1,39 @@
+
+<div class="mat-elevation-z8">
+  <table mat-table [dataSource]="dataSource">
+
+    <!-- Transaction Id  Column -->
+    <ng-container matColumnDef="transactionId">
+      <th mat-header-cell *matHeaderCellDef> Transaction Id </th>
+      <td mat-cell *matCellDef="let element"> {{element.transactionId}} </td>
+    </ng-container>
+
+    <!-- Account No  Column -->
+    <ng-container matColumnDef="accountNo">
+      <th mat-header-cell *matHeaderCellDef> Account No </th>
+      <td mat-cell *matCellDef="let element"> {{element.accountNo}} </td>
+    </ng-container>
+
+    <!-- Date Column -->
+    <ng-container matColumnDef="time">
+      <th mat-header-cell *matHeaderCellDef> Date </th>
+      <td mat-cell *matCellDef="let element"> {{element.time | date}} </td>
+    </ng-container>
+
+    <!-- Status Column -->
+    <ng-container matColumnDef="status">
+      <th mat-header-cell *matHeaderCellDef> Status </th>
+      <td mat-cell *matCellDef="let element"> {{element.status}} </td>
+    </ng-container>
+    <!-- Dispensed Amount  Column -->
+    <ng-container matColumnDef="dispensedAmount">
+      <th mat-header-cell *matHeaderCellDef> Dispensed Amount </th>
+      <td mat-cell *matCellDef="let element"> {{element.dispensedAmount | currency}} </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+
+  <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
+</div>

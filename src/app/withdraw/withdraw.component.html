@@ -1,0 +1,36 @@
+<div class="withdraw">
+
+<div class="row"  *ngIf="!user">
+  <div class="col-sm-4">
+      <label for="account">Account No:</label>
+      <input type="number" [(ngModel)]="accountNo" class="form-control" id="account"  min ="0" value="0" step="1">
+  </div>
+  <div class="col-sm-4">
+    <label for="pin">Pin:</label>
+    <input type="password" [(ngModel)]="pin" class="form-control" id="pin"  max ="4" value="0" step="1">
+  </div>
+  <div class="col-sm-4">
+    <label for="pin">Login:</label>
+    <button type="button" class="form-control btn btn-primary" (click)="login()">Login</button>
+  </div>
+
+</div>
+<div class="row user-details" *ngIf="user">
+    <div class="card col-sm-8">
+      <div class="upper">
+        <h6>Welcome To</h6>
+        <h4>{{user.accountHolderName}}</h4>
+      </div>
+      <div class="lower">
+        <h5>Balance To Withdraw</h5> <span>{{user.balance | currency}}</span>
+      </div>
+    </div>
+  <div class="col-sm-4">
+    <label for="pin">Amount:</label>
+    <input type="number" [(ngModel)]="amount" class="form-control" id="amount"  min ="0" value="0" step="1"><br>
+    <button type="button" class="form-control btn btn-primary" (click)="withdraw()" [disabled]="!amount">Withdraw</button>
+  </div>
+</div>
+<div>
+</div>
+</div>

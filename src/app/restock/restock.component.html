@@ -1,0 +1,58 @@
+<table class="table  restock">
+  <thead>
+  <tr>
+    <th scope="col">Denomination</th>
+    <th scope="col">New Stock </th>
+    <th scope="col">Existing Quantity</th>
+    <th scope="col">Total Quantity</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr >
+    <th scope="row">$100</th>
+    <td> <input type="number" class="form-control"  [(ngModel)]="restocks.hundreds" min ="0" value="0"></td>
+    <td> {{stocks.hundreds }}</td>
+    <td> {{(stocks.hundreds + restocks.hundreds) }}</td>
+  </tr>
+  <tr >
+    <th scope="row">$50</th>
+    <td> <input type="number" [(ngModel)]="restocks.fifties" class="form-control"  min ="0" value="0"></td>
+    <td> {{stocks.fifties}}</td>
+
+    <td> {{(stocks.fifties + restocks.fifties)}}</td>
+  </tr>
+  <tr >
+    <th scope="row">$20</th>
+    <td> <input type="number" [(ngModel)]="restocks.twenties"  class="form-control"  min ="0" value="0"></td>
+    <td> {{stocks.twenties}}</td>
+
+    <td> {{(stocks.twenties + restocks.twenties)}}</td>
+  </tr>
+  <tr >
+    <th scope="row">$10</th>
+    <td> <input type="number" [(ngModel)]="restocks.tens" class="form-control"  min ="0" value="0"></td>
+    <td> {{stocks.tens}}</td>
+    <td> {{(stocks.tens + restocks.tens)}}</td>
+  </tr>
+  <tr >
+    <th scope="row">$5</th>
+    <td> <input type="number" [(ngModel)]="restocks.fives" class="form-control"  min ="0" value="0"></td>
+    <td> {{stocks.fives}}</td>
+    <td> {{(stocks.fives + restocks.fives) }}</td>
+  </tr>
+  <tr >
+    <th scope="row">$1</th>
+    <td> <input type="number" [(ngModel)]="restocks.ones" class="form-control"  min ="0" value="0"></td>
+    <td> {{stocks.ones}}</td>
+    <td> {{(stocks.ones + restocks.ones)}}</td>
+  </tr>
+  <tr >
+    <th scope="row"></th>
+    <td></td>
+    <td><button type="button" class="btn btn-primary" (click)="updateStock()">Restock</button></td>
+    <td>
+    </td>
+  </tr>
+  </tbody>
+
+</table>

@@ -1,0 +1,51 @@
+<table class="table  restock">
+  <thead>
+  <tr>
+    <th scope="col">Denomination</th>
+    <th scope="col">Quantity</th>
+    <th scope="col">Total Amount</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr >
+    <th scope="row">$100</th>
+    <td> {{stocks.hundreds }}</td>
+    <td> {{(stocks.hundreds * 100) | currency }}</td>
+  </tr>
+  <tr >
+    <th scope="row">$50</th>
+    <td> {{stocks.fifties}}</td>
+
+    <td> {{(stocks.fifties * 50) | currency}}</td>
+  </tr>
+  <tr >
+    <th scope="row">$20</th>
+    <td> {{stocks.twenties}}</td>
+
+    <td> {{(stocks.twenties * 20) | currency}}</td>
+  </tr>
+  <tr >
+    <th scope="row">$10</th>
+    <td> {{stocks.tens}}</td>
+    <td> {{(stocks.tens * 10) | currency}}</td>
+  </tr>
+  <tr >
+    <th scope="row">$5</th>
+    <td> {{stocks.fives}}</td>
+    <td> {{(stocks.fives * 5 )| currency }}</td>
+  </tr>
+  <tr >
+    <th scope="row">$1</th>
+    <td> {{stocks.ones}}</td>
+    <td> {{(stocks.ones | currency)}}</td>
+  </tr>
+  <tr >
+    <th scope="row"></th>
+    <td>Total</td>
+    <td>{{atmService.getTotalCash() | currency}}</td>
+    <td>
+    </td>
+  </tr>
+  </tbody>
+
+</table>

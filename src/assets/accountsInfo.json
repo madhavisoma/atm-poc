@@ -1,0 +1,26 @@
+[
+  {
+    "accountNo": 1,
+    "pin": 7770,
+    "accountHolderName": "John",
+    "balance": 10000
+  },
+  {
+    "accountNo": 2,
+    "accountHolderName": "Anil Kumar",
+    "pin": 7770,
+    "balance": 500
+  },
+  {
+    "accountNo": 3,
+    "pin": 7770,
+    "accountHolderName": "Ravi",
+    "balance": 10000
+  },
+  {
+    "accountNo": 4,
+    "pin": 7770,
+    "accountHolderName": "Preethi Sindhia",
+    "balance": 200
+  }
+]
